@@ -1,3 +1,9 @@
-@tailwind base;
+@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');@tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .headerLink {
+        @apply text-white text-lg font-bold transition duration-[.3s] hover:text-red-500;
+    }
+}
