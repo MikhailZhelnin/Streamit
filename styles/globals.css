@@ -7,3 +7,8 @@
         @apply text-white text-lg font-bold transition duration-[.3s] hover:text-red-500;
     }
 }
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    color: white;
+}

@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import {Movie} from "../models";
 import {Swiper, SwiperSlide} from 'swiper/react';
-import SwiperCore, {Autoplay} from 'swiper';
+import SwiperCore, {Autoplay, EffectFade} from 'swiper';
 
 import "swiper/css";
+import 'swiper/css/effect-fade'
 
 import BannerSingleSlide from "./BannerSingleSlide";
 import VideoTrailerModal from "./VideoTrailerModal";
@@ -22,7 +23,16 @@ const Banner = ({netflixOriginals}: BannerProps) => {
   return (
     <>
       {openedModal && <VideoTrailerModal id={videoId} onClose={() => setOpenedModal(false)}/>}
-      <Swiper navigation={true} loop={true} autoplay={{delay: 5000}} className='w-100% h-screen'>
+      <Swiper
+        loop={true}
+        modules={[EffectFade]}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false
+        }}
+        effect={'fade'}
+        className='w-100% h-screen'
+      >
         {netflixOriginals.map(movie => (
           <SwiperSlide key={movie.id}>
             <BannerSingleSlide movie={movie} onOpen={() => setOpenedModal(true)} setVideoId={setVideoId}/>

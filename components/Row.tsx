@@ -25,12 +25,14 @@ const Row = ({movieCategoryTitle, movieCategory}: RowProps) => {
       <Swiper
         navigation={true}
         loop={true}
-        autoplay={{delay: 5000}}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false
+        }}
         slidesPerView={3}
         slidesPerGroup={3}
         spaceBetween={30}
         modules={[Navigation]}
-        className=''
       >
         {movieCategory.map(movie => (
           <SwiperSlide key={movie.id}>
