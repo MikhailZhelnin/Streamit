@@ -4,6 +4,7 @@ import Banner from "../components/Banner";
 import requests from '../utils/requests';
 import {Movie} from "../models";
 import Row from "../components/Row";
+import Footer from "../components/Footer";
 
 interface HomeProps {
   netflixOriginals: Movie[],
@@ -43,6 +44,7 @@ const Home = ({
         <Row movieCategoryTitle='Romance Movies' movieCategory={romanceMovies}/>
         <Row movieCategoryTitle='Documentary Movies' movieCategory={documentaries}/>
       </main>
+      <Footer/>
     </div>
   )
 }

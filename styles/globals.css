@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-    .headerLink {
+    .navLink {
         @apply text-white text-lg font-bold transition duration-[.3s] hover:text-red-500;
     }
 }

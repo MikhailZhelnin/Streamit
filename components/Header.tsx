@@ -13,16 +13,16 @@ function Header() {
       <nav>
         <ul className='flex'>
           <li className='pr-8'>
-            <Link href='/' className='headerLink'>Home</Link>
+            <Link href='/' className='navLink'>Home</Link>
           </li>
           <li className='pr-8'>
-            <Link href='/' className='headerLink'>Pricing</Link>
+            <Link href='/' className='navLink'>Pricing</Link>
           </li>
           <li className='pr-8'>
-            <Link href='/' className='headerLink'>Blog</Link>
+            <Link href='/' className='navLink'>Blog</Link>
           </li>
           <li className='pr-8'>
-            <Link href='/' className='headerLink'>About</Link>
+            <Link href='/' className='navLink'>About</Link>
           </li>
         </ul>
       </nav>
